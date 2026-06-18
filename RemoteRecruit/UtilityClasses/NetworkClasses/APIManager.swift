@@ -38,7 +38,7 @@ final class APIManager {
 
     // Convenience init for the shared singleton; replace with your real base URL.
     private convenience init() {
-        self.init(baseURL: URL(string: "https://api.example.com")!)
+        self.init(baseURL: URL(string: "https://api.jsonserver.io/joblist")!)
     }
 
     private static func defaultDecoder() -> JSONDecoder {

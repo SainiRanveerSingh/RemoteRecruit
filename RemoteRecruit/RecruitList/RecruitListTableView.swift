@@ -10,14 +10,14 @@ import UIKit
 
 class RecruitListTableView: UITableView {
     
-    var notificationViewModel: NotificationViewControllerViewModel!
+    var viewControllerViewModel: ViewControllerViewModel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(_ viewModel: NotificationViewControllerViewModel) {
-        self.notificationViewModel = viewModel
+    func configure(_ viewModel: ViewControllerViewModel) {
+        self.viewControllerViewModel = viewModel
         dataSource = self
         delegate = self
         let nib = UINib.init(nibName: "RecruitListTableViewCell", bundle: nil)
@@ -32,7 +32,7 @@ class RecruitListTableView: UITableView {
 
 extension RecruitListTableView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.notificationViewModel.arrayNotifications.count
+        return self.viewControllerViewModel.filteredJobs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,7 +41,7 @@ extension RecruitListTableView: UITableViewDataSource, UITableViewDelegate {
     
     func cell(indexPath : IndexPath) -> RecruitListTableViewCell {
         let cell = self.dequeueReusableCell(withIdentifier: "RecruitListTableViewCell", for: indexPath) as! RecruitListTableViewCell
-        cell.configureCell(indexPath: indexPath, notificationData: self.notificationViewModel.arrayNotifications)
+        cell.configureCell(indexPath: indexPath, job: self.viewControllerViewModel.arrayJobList[indexPath.row])
         return cell
     }
     

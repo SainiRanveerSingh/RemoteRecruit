@@ -40,24 +40,32 @@
 		043A5C8B2FE403FE00083FF8 /* Exceptions for "RemoteRecruit" folder in "RemoteRecruitTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				jobs.json,
+				RecruitList/JobsListResponse.swift,
 				RecruitList/RecruitListTableView.swift,
 				RecruitList/RecruitListTableViewCell.swift,
 				RecruitList/RecruitListTableViewCell.xib,
 				"UtilityClasses/ExtensionClasses/UIView+Extension.swift",
+				UtilityClasses/JsonFileClasses/JobsListLoader.swift,
 				UtilityClasses/NetworkClasses/APIError.swift,
 				UtilityClasses/NetworkClasses/APIManager.swift,
+				ViewControllerViewModel.swift,
 			);
 			target = 043A5C672FE4039600083FF8 /* RemoteRecruitTests */;
 		};
 		043A5C8C2FE403FE00083FF8 /* Exceptions for "RemoteRecruit" folder in "RemoteRecruitUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				jobs.json,
+				RecruitList/JobsListResponse.swift,
 				RecruitList/RecruitListTableView.swift,
 				RecruitList/RecruitListTableViewCell.swift,
 				RecruitList/RecruitListTableViewCell.xib,
 				"UtilityClasses/ExtensionClasses/UIView+Extension.swift",
+				UtilityClasses/JsonFileClasses/JobsListLoader.swift,
 				UtilityClasses/NetworkClasses/APIError.swift,
 				UtilityClasses/NetworkClasses/APIManager.swift,
+				ViewControllerViewModel.swift,
 			);
 			target = 043A5C712FE4039600083FF8 /* RemoteRecruitUITests */;
 		};

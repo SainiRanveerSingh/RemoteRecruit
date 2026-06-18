@@ -1,0 +1,342 @@
+{
+    "data": {
+        "listDetails": {
+            "total_results": 12,
+            "currency": "INR",
+            "generated_at": "2026-06-18T00:00:00Z",
+            "note":
+                "Sample/mock dataset modeled on the Adzuna API response shape for prototyping search, browse, and detail views."
+        },
+        "jobs": [
+            {
+                "id": "job_0001",
+                "title": "iOS Developer (Swift/UIKit)",
+                "company": "Bright Pixel Technologies",
+                "location": {
+                    "city": "Bengaluru",
+                    "state": "Karnataka",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 900000,
+                    "max": 1500000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Mid",
+                "tags": [
+                    "Swift",
+                    "UIKit",
+                    "Auto Layout",
+                    "REST APIs"
+                ],
+                "description":
+                    "Build and maintain consumer-facing iOS apps using UIKit. Work on calendar views, booking flows, and reusable UI components. Strong experience with Auto Layout and JSON parsing required.",
+                "posted_date": "2026-06-10",
+                "application_url": "https://example.com/jobs/job_0001"
+            },
+            {
+                "id": "job_0002",
+                "title": "Senior Mobile Engineer",
+                "company": "Kidoo Learning",
+                "location": {
+                    "city": "Hyderabad",
+                    "state": "Telangana",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 1600000,
+                    "max": 2400000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Senior",
+                "tags": [
+                    "Swift",
+                    "Combine",
+                    "Children's Apps",
+                    "Scheduling"
+                ],
+                "description":
+                    "Lead development of an educational scheduling app for children, including session listings, calendar booking, and custom UI animations.",
+                "posted_date": "2026-06-08",
+                "application_url": "https://example.com/jobs/job_0002"
+            },
+            {
+                "id": "job_0003",
+                "title": "Frontend Developer (React)",
+                "company": "Nimbus Cloud Labs",
+                "location": {
+                    "city": "Pune",
+                    "state": "Maharashtra",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 700000,
+                    "max": 1100000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Junior",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind"
+                ],
+                "description":
+                    "Build responsive dashboards and admin panels for a B2B SaaS platform.",
+                "posted_date": "2026-06-12",
+                "application_url": "https://example.com/jobs/job_0003"
+            },
+            {
+                "id": "job_0004",
+                "title": "Backend Engineer (Node.js)",
+                "company": "Vertex Systems",
+                "location": {
+                    "city": "Gurugram",
+                    "state": "Haryana",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 1200000,
+                    "max": 1800000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Mid",
+                "tags": [
+                    "Node.js",
+                    "PostgreSQL",
+                    "AWS"
+                ],
+                "description":
+                    "Design and maintain scalable APIs powering a fintech platform.",
+                "posted_date": "2026-06-05",
+                "application_url": "https://example.com/jobs/job_0004"
+            },
+            {
+                "id": "job_0005",
+                "title": "Product Manager - Mobile Apps",
+                "company": "Kidoo Learning",
+                "location": {
+                    "city": "Hyderabad",
+                    "state": "Telangana",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 1800000,
+                    "max": 2600000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Senior",
+                "tags": [
+                    "Product Strategy",
+                    "Mobile",
+                    "EdTech"
+                ],
+                "description":
+                    "Own the roadmap for a children's educational activity scheduling app, working closely with iOS and backend engineers.",
+                "posted_date": "2026-06-14",
+                "application_url": "https://example.com/jobs/job_0005"
+            },
+            {
+                "id": "job_0006",
+                "title": "iOS Developer - Dating App",
+                "company": "MingleSpark Technologies",
+                "location": {
+                    "city": "Delhi",
+                    "state": "Delhi",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 1000000,
+                    "max": 1700000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Mid",
+                "tags": [
+                    "Swift",
+                    "SwiftUI",
+                    "Firebase",
+                    "Dating Apps"
+                ],
+                "description":
+                    "Join an early-stage dating app focused on the South Asian market. Build matching, chat, and profile features from the ground up.",
+                "posted_date": "2026-06-15",
+                "application_url": "https://example.com/jobs/job_0006"
+            },
+            {
+                "id": "job_0007",
+                "title": "QA Engineer - Mobile",
+                "company": "Bright Pixel Technologies",
+                "location": {
+                    "city": "Bengaluru",
+                    "state": "Karnataka",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 600000,
+                    "max": 950000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Junior",
+                "tags": [
+                    "Manual Testing",
+                    "XCTest",
+                    "Automation"
+                ],
+                "description":
+                    "Test iOS applications across devices, write automated UI tests, and track bugs through resolution.",
+                "posted_date": "2026-06-09",
+                "application_url": "https://example.com/jobs/job_0007"
+            },
+            {
+                "id": "job_0008",
+                "title": "Full Stack Developer",
+                "company": "Vertex Systems",
+                "location": {
+                    "city": "Remote",
+                    "state": null,
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 1100000,
+                    "max": 1900000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Remote",
+                "experience_level": "Mid",
+                "tags": [
+                    "React",
+                    "Node.js",
+                    "MongoDB"
+                ],
+                "description":
+                    "Work across the stack on a logistics tracking platform, fully remote with flexible hours.",
+                "posted_date": "2026-06-11",
+                "application_url": "https://example.com/jobs/job_0008"
+            },
+            {
+                "id": "job_0009",
+                "title": "UI/UX Designer",
+                "company": "Nimbus Cloud Labs",
+                "location": {
+                    "city": "Pune",
+                    "state": "Maharashtra",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 800000,
+                    "max": 1300000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Mid",
+                "tags": [
+                    "Figma",
+                    "Design Systems",
+                    "Prototyping"
+                ],
+                "description":
+                    "Design intuitive interfaces for enterprise dashboards, working closely with frontend engineers.",
+                "posted_date": "2026-06-07",
+                "application_url": "https://example.com/jobs/job_0009"
+            },
+            {
+                "id": "job_0010",
+                "title": "Junior iOS Developer",
+                "company": "MingleSpark Technologies",
+                "location": {
+                    "city": "Delhi",
+                    "state": "Delhi",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 500000,
+                    "max": 800000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Junior",
+                "tags": [
+                    "Swift",
+                    "UIKit",
+                    "Git"
+                ],
+                "description":
+                    "Support senior engineers in building and maintaining core app screens. Great entry point into mobile development.",
+                "posted_date": "2026-06-16",
+                "application_url": "https://example.com/jobs/job_0010"
+            },
+            {
+                "id": "job_0011",
+                "title": "DevOps Engineer",
+                "company": "Vertex Systems",
+                "location": {
+                    "city": "Gurugram",
+                    "state": "Haryana",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 1400000,
+                    "max": 2200000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Senior",
+                "tags": [
+                    "AWS",
+                    "Kubernetes",
+                    "CI/CD"
+                ],
+                "description":
+                    "Own infrastructure and deployment pipelines for a fintech product serving millions of users.",
+                "posted_date": "2026-06-04",
+                "application_url": "https://example.com/jobs/job_0011"
+            },
+            {
+                "id": "job_0012",
+                "title": "Data Analyst",
+                "company": "Nimbus Cloud Labs",
+                "location": {
+                    "city": "Mumbai",
+                    "state": "Maharashtra",
+                    "country": "India"
+                },
+                "salary": {
+                    "min": 650000,
+                    "max": 1000000,
+                    "currency": "INR",
+                    "period": "year"
+                },
+                "employment_type": "Full-time",
+                "experience_level": "Junior",
+                "tags": [
+                    "SQL",
+                    "Python",
+                    "Tableau"
+                ],
+                "description":
+                    "Analyze product usage data to drive decisions across the engineering and growth teams.",
+                "posted_date": "2026-06-13",
+                "application_url": "https://example.com/jobs/job_0012"
+            }
+        ]
+    },
+    "status" : true,
+    "message": "success"
+}

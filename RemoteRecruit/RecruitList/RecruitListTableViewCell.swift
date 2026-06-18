@@ -35,19 +35,13 @@ class RecruitListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(indexPath: IndexPath, notificationData: [NotificationDataList]?) {
-        if notificationData != nil && notificationData?.count ?? 0 > indexPath.row {
-            if let notification = notificationData?[indexPath.row] {
-                labelJobTitle.text = notification.title
-                labelMessage.text = notification.message
-                labelNewMessageTag.isHidden = true
-                labelNewMessageWidthConstraint.constant = 0.0
-                if arrNotificationList.contains(notification) {
-                    labelNewMessageTag.isHidden = false
-                    labelNewMessageWidthConstraint.constant = 34.0
-                }
-            }
-        }
+    func configureCell(indexPath: IndexPath, job: Job?) {
+        guard let jobValue = job else { return }
+        labelJobTitle.text = jobValue.title
+        labelCompanyName.text = jobValue.company
+        labelLocation.text =
+        "\(jobValue.location?.city ?? ""), \(jobValue.location?.country ?? "")"
+        labelSalaryRange.text = "\(jobValue.salary?.currency ?? "INR") \(jobValue.salary?.min ?? 0) to \(jobValue.salary?.max ?? 0)"
     }
     
 }
