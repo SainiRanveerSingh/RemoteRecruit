@@ -26,8 +26,12 @@ final class ViewControllerViewModel {
         Task {
             do {
                 arrayJobList = try await service.fetchJobs()
-                applyFilter()
-                reloadData?()
+                if arrayJobList.count > 0 {
+                    applyFilter()
+                    reloadData?()
+                } else {
+                    onError?("No Jobs available.")
+                }
             } catch {
                 onError?(error.localizedDescription)
             }
