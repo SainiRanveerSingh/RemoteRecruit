@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 @MainActor
 final class ViewControllerViewModel {
@@ -15,8 +16,9 @@ final class ViewControllerViewModel {
     
     var reloadData: (() -> Void)?
     var onError: ((String) -> Void)?
-
-    init(service: JobListProtocol = JobListService()) {
+    private var currentSearchText: String = ""
+    
+    init(service: JobListProtocol) {
         self.service = service
     }
     
@@ -24,7 +26,7 @@ final class ViewControllerViewModel {
         Task {
             do {
                 arrayJobList = try await service.fetchJobs()
-                filteredJobs = arrayJobList
+                applyFilter()
                 reloadData?()
             } catch {
                 onError?(error.localizedDescription)
@@ -33,25 +35,29 @@ final class ViewControllerViewModel {
     }
     
     func search(text: String) {
-            guard !text.isEmpty else {
-                filteredJobs = arrayJobList
-                reloadData?()
-                return
-            }
-            filteredJobs = arrayJobList.filter {
-                $0.title?.localizedCaseInsensitiveContains(text) ?? false
-                ||
-                $0.company?.localizedCaseInsensitiveContains(text) ?? false
-            }
-            reloadData?()
-        }
-
-        func job(at index: Int) -> Job {
-            filteredJobs[index]
-        }
-
-        var count: Int {
-            filteredJobs.count
-        }
+        currentSearchText = text
+        applyFilter()
+        reloadData?()
+    }
     
+    private func applyFilter() {
+        guard !currentSearchText.isEmpty else {
+            filteredJobs = arrayJobList
+            return
+        }
+        filteredJobs = arrayJobList.filter {
+            $0.title?.localizedCaseInsensitiveContains(currentSearchText) ?? false
+            ||
+            $0.company?.localizedCaseInsensitiveContains(currentSearchText) ?? false
+        }
+    }
+    
+    func job(at index: Int) -> Job {
+        filteredJobs[index]
+    }
+
+    func setupNavigationBar(for controller: UIViewController) {
+        controller.navigationItem.hidesBackButton = true
+        controller.setupNavigationBar(titleText: "Available Jobs")
+    }
 }

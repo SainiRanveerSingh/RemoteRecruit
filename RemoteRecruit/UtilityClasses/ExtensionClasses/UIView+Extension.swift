@@ -57,3 +57,50 @@ extension UIView {
         }
     }
 }
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                         action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+extension UIViewController {
+    func setupNavigationBar(titleText: String) {
+        let label = UILabel()
+        label.numberOfLines = 1 //increase the number of lines if required
+        label.lineBreakMode = .byWordWrapping
+        label.textAlignment = .center
+        label.text = titleText
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        
+        let navBar = self.navigationController?.navigationBar
+        let barWidth = navBar?.frame.width ?? UIScreen.main.bounds.width
+        let barHeight = navBar?.frame.height ?? 44
+        
+        // Tighter frame: standard height, reduced width for buttons
+        label.frame = CGRect(x: 0, y: 0, width: barWidth * 0.6, height: barHeight)  // 60% width leaves room
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.preferredMaxLayoutWidth = barWidth * 0.6
+        
+        NSLayoutConstraint.activate([
+            label.widthAnchor.constraint(equalToConstant: barWidth * 0.6),
+            label.heightAnchor.constraint(equalToConstant: barHeight)
+        ])
+        
+        self.navigationItem.titleView = label  // Set immediately for layout
+        
+        // Force layout before animation
+        self.view.layoutIfNeeded()
+        navBar?.layoutIfNeeded()
+        //--
+    }
+}

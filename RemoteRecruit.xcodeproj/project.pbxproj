@@ -40,13 +40,17 @@
 		043A5C8B2FE403FE00083FF8 /* Exceptions for "RemoteRecruit" folder in "RemoteRecruitTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				JobDetailViewController/JobDetailViewController.swift,
+				JobDetailViewController/JobDetailViewControllerViewModel.swift,
 				jobs.json,
 				RecruitList/JobsListResponse.swift,
 				RecruitList/RecruitListTableView.swift,
 				RecruitList/RecruitListTableViewCell.swift,
 				RecruitList/RecruitListTableViewCell.xib,
+				UtilityClasses/AppContantValues.swift,
 				"UtilityClasses/ExtensionClasses/UIView+Extension.swift",
 				UtilityClasses/JsonFileClasses/JobsListLoader.swift,
+				UtilityClasses/LoaderView/LoaderView.swift,
 				UtilityClasses/NetworkClasses/APIError.swift,
 				UtilityClasses/NetworkClasses/APIManager.swift,
 				ViewControllerViewModel.swift,
@@ -56,13 +60,17 @@
 		043A5C8C2FE403FE00083FF8 /* Exceptions for "RemoteRecruit" folder in "RemoteRecruitUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				JobDetailViewController/JobDetailViewController.swift,
+				JobDetailViewController/JobDetailViewControllerViewModel.swift,
 				jobs.json,
 				RecruitList/JobsListResponse.swift,
 				RecruitList/RecruitListTableView.swift,
 				RecruitList/RecruitListTableViewCell.swift,
 				RecruitList/RecruitListTableViewCell.xib,
+				UtilityClasses/AppContantValues.swift,
 				"UtilityClasses/ExtensionClasses/UIView+Extension.swift",
 				UtilityClasses/JsonFileClasses/JobsListLoader.swift,
+				UtilityClasses/LoaderView/LoaderView.swift,
 				UtilityClasses/NetworkClasses/APIError.swift,
 				UtilityClasses/NetworkClasses/APIManager.swift,
 				ViewControllerViewModel.swift,
@@ -330,6 +338,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +370,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

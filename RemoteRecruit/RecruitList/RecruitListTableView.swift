@@ -11,6 +11,7 @@ import UIKit
 class RecruitListTableView: UITableView {
     
     var viewControllerViewModel: ViewControllerViewModel!
+    var didSelect: ((_ index: Int) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,7 +42,7 @@ extension RecruitListTableView: UITableViewDataSource, UITableViewDelegate {
     
     func cell(indexPath : IndexPath) -> RecruitListTableViewCell {
         let cell = self.dequeueReusableCell(withIdentifier: "RecruitListTableViewCell", for: indexPath) as! RecruitListTableViewCell
-        cell.configureCell(indexPath: indexPath, job: self.viewControllerViewModel.arrayJobList[indexPath.row])
+        cell.configureCell(indexPath: indexPath, job: self.viewControllerViewModel.filteredJobs[indexPath.row])
         return cell
     }
     
@@ -52,7 +53,7 @@ extension RecruitListTableView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         deselectRow(at: indexPath, animated: true)
         
-        //didSelect?(self.viewModel.arrayMyCoursesList[indexPath.row], indexPath.row, .simple, bgColor)
+        didSelect?(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
